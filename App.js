@@ -1,20 +1,51 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import Header from './components/Header';
+import GraphicPanel from './components/GraphicPanel';
+import Footer from './components/Footer';
+import { theme } from './themes/theme';
+import Landing from './components/Landing';
+import Contact from './components/Contact';
+import DotNavigator from './components/DotNavigator'; // New DotNavigator component
+import scrollUtils from './hooks/ScrollUtils'; // Import custom hook
 
-export default function App() {
+const App = () => {
+  // Use the custom hook for scroll logic
+  const { refs, activeSection, scrollTo } = scrollUtils();
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <div style={styles.site}>
+      <Header 
+        scrollTo={scrollTo} 
+        refs={refs} 
+      />
+      <Landing 
+        title="Sentato Audio" 
+        description="Audio Editing, Mixing and Scoring" 
+      />
+      <GraphicPanel 
+        title="Services" 
+        ref={refs.graphic} 
+        description="Description of Services" 
+      />
+      <Contact ref={refs.contact} />
+      <Footer />
+      <DotNavigator 
+        activeSection={activeSection} 
+        scrollTo={scrollTo} 
+        refs={refs}  
+      />
+    </div>
   );
+
+};
+
+const styles ={
+  site: {
+    backgroundColor: theme.colors.primary, 
+    display:'flex', 
+    flexDirection:'column', 
+    height:'auto'
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

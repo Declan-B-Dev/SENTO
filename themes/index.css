@@ -1,0 +1,26 @@
+/* index.css or App.css or any global stylesheet */
+
+/* Import Circular Std font */
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../assets/circular-std-font-family/CircularStd-Black.woff2') format('woff2'),
+         url('../assets/circular-std-font-family/CircularStd-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-feature-settings: 'tnum';
+}
+  
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../assets/circular-std-font-family/CircularStd-Bold.woff2') format('woff2'),
+         url('../assets/circular-std-font-family/CircularStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-feature-settings: 'tnum';
+}
+  
+  /* Now apply Circular Std to the entire project or specific elements */
+body {
+    font-family: 'Circular Std', sans-serif;
+}
+  

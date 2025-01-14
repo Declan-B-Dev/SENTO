@@ -1,0 +1,154 @@
+/* Parent container with padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3rds width for s1 s2, 1/3rd for s3 */
+  grid-template-rows: auto;
+  height: auto; /* Auto to avoid site-wide resizing issues */
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.container-narrow {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each section will align content with flexbox */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;   /* Allows absolute positioning of pseudo-element */
+  background-color: #D90429;
+  border-radius: 10px; 
+  padding: 13px 13px;
+}
+
+.section:hover {
+  background-color: #2B2D42;
+  border-radius: 10px;   
+}
+
+
+/* Section 3 takes the remaining space */
+.section-3 {
+  grid-row: span 2;
+  width: 100%;
+  flex-direction: column;
+
+}
+
+/* Flexbox for section boxes */
+.box {
+  display: flex;
+  align-items: center;         /* Vertically center the content */
+  height: 100%;                /* Ensure the section takes full height of its grid row */
+  width: 100%;
+  background-color:white;
+  padding: 0% 0%;
+  border-radius: 10px;  
+}
+
+.box-3 {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;                /* Ensure the section takes full height of its grid row */
+  width: 100%;
+  padding: 2% 7%;
+}
+
+.text-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     /* Vertically center text */
+  height: 100%;            /* Takes up full height of the section */
+  width: 100%;             /* Full width to fill space */
+  border-radius: 10px;
+  padding: 0px 0px; 
+}
+
+.text-wrapper-1 {
+  padding-right: 15%;
+}
+.text-wrapper-2 {
+  padding-left: 15%;
+}
+.text-wrapper-3 {
+  height: 40%;
+  padding: 0px 0px;
+  width: 90%;   
+}
+
+.text {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Logo styles */
+.logo {
+  width: 260px;              /* Set width of square */
+  height: 260px;             /* Set height of square (same as width for a square) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;      /* Optional: Rounded corners for the square */
+}
+
+/* Section 3: Logo at the top with text below */
+.logo-3 {
+  align-self: center; /* Center the logo horizontally */
+  justify-content: flex-start;
+}
+
+/* Responsive layout for narrow screens */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  .section {
+    height: 100%;
+    width: 100%;
+    padding: 13px 13px;
+  }
+
+  .box {
+    flex-direction: column; 
+    width: 100%;
+    padding: 0% 10%;
+  }
+
+  /* Remove box-3 class when screen is narrow */
+  .section-3 .box {
+    flex-direction: column; /* Stack content vertically */
+  }
+  .logo {
+    margin-top: 10%;
+  }
+  .logo-1 {
+    margin-right: 0px; /* Space between logo and text */
+  }
+
+  .logo-2 {
+    margin-left: 0px; /* Space between logo and text */
+  }
+  .text-wrapper {
+    padding-bottom: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 0%;
+  }
+}
