@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/SENTO/static/css/main.d8b2218e.css",
+    "main.js": "/SENTO/static/js/main.dacac32a.js",
+    "static/js/700.e8127495.js": "/SENTO/static/js/700.e8127495.js",
+    "static/media/MaterialIcons.ttf": "/SENTO/static/media/MaterialIcons.f20305dee9d396fea5c7.ttf",
+    "static/media/CircularStd-Bold.woff": "/SENTO/static/media/CircularStd-Bold.4bae1919c290b4010366.woff",
+    "static/media/CircularStd-Black.woff": "/SENTO/static/media/CircularStd-Black.4a2c5eeb3ab64924ab01.woff",
+    "static/media/CircularStd-Bold.woff2": "/SENTO/static/media/CircularStd-Bold.0b58ca4241eda42cff1f.woff2",
+    "static/media/CircularStd-Black.woff2": "/SENTO/static/media/CircularStd-Black.00cb4881193e9281e57a.woff2",
+    "static/media/mx3.jpg": "/SENTO/static/media/mx3.96d9c088ccc5ef442af5.jpg",
+    "static/media/mx2.jpg": "/SENTO/static/media/mx2.6a60b0cd023688e758a1.jpg",
+    "favicon.ico": "/SENTO/favicon.ico",
+    "static/media/mx4.jpg": "/SENTO/static/media/mx4.f4a5c63e7adbfaccd5c1.jpg",
+    "index.html": "/SENTO/index.html",
+    "favicon-32.png": "/SENTO/favicon-32.png",
+    "favicon-16.png": "/SENTO/favicon-16.png",
+    "serve.json": "/SENTO/serve.json",
+    "manifest.json": "/SENTO/manifest.json",
+    "main.d8b2218e.css.map": "/SENTO/static/css/main.d8b2218e.css.map",
+    "main.dacac32a.js.map": "/SENTO/static/js/main.dacac32a.js.map",
+    "700.e8127495.js.map": "/SENTO/static/js/700.e8127495.js.map"
+  },
+  "entrypoints": [
+    "static/js/700.e8127495.js",
+    "static/css/main.d8b2218e.css",
+    "static/js/main.dacac32a.js"
+  ]
+}
